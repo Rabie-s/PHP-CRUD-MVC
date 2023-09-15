@@ -1,26 +1,27 @@
 <?php
+
 namespace Core;
 
+class Flash
+{
+    private static $key = 'message';
 
-class Flash{
-
-    private array $message = [];
-
-    
-    function __destruct() {
-        $_SESSION['message'] = $this->message;
-        
-    }
-    
-    public function setFlash($key,$value){
-        $this->message[$key] = $value;
-    }
-
-    public function getFlash($key){
-        if(!isset($_SESSION['message'][$key])){
-            return null;
+    public static function setFlash($name, $message)
+    {
+        if (isset($_SESSION[self::$key][$name])) {
+            unset($_SESSION[self::$key][$name]);
         }
-        return $_SESSION['message'][$key];
+
+        $_SESSION[self::$key][$name] = $message;
     }
 
+    public static function getFlash($name)
+    {
+        if (!empty($_SESSION[self::$key][$name])) {
+            $message = $_SESSION[self::$key][$name];
+            unset($_SESSION[self::$key][$name]);
+            return $message;
+        }
+        return null;
+    }
 }

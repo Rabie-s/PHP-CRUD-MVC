@@ -8,9 +8,9 @@ namespace Core;
 class View
 {
 
-    public static $path = __DIR__ . '/../App/Views';
-    public static $page;
-    public static ?array $data;
+    protected static $path = __DIR__ . '/../App/Views';
+    protected static $page;
+    protected static ?array $data;
 
 
     public static function render($page, $data = null)
