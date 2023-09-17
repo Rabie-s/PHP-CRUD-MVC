@@ -7,6 +7,10 @@ namespace Composer\Autoload;
 class ComposerStaticInit6908ec04c9f370aa986f315ac73d379b
 {
     public static $prefixLengthsPsr4 = array (
+        'R' => 
+        array (
+            'Rakit\\Validation\\' => 17,
+        ),
         'C' => 
         array (
             'Core\\' => 5,
@@ -18,6 +22,10 @@ class ComposerStaticInit6908ec04c9f370aa986f315ac73d379b
     );
 
     public static $prefixDirsPsr4 = array (
+        'Rakit\\Validation\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/rakit/validation/src',
+        ),
         'Core\\' => 
         array (
             0 => __DIR__ . '/../..' . '/Core',
@@ -39,9 +47,65 @@ class ComposerStaticInit6908ec04c9f370aa986f315ac73d379b
     );
 
     public static $classMap = array (
-        'App\\Controllers\\UserControllers' => __DIR__ . '/../..' . '/App/Controllers/UserControllers.php',
+        'App\\Config' => __DIR__ . '/../..' . '/App/Config.php',
+        'App\\Controllers\\StudentController' => __DIR__ . '/../..' . '/App/Controllers/StudentController.php',
+        'App\\Controllers\\UserController' => __DIR__ . '/../..' . '/App/Controllers/UserController.php',
+        'App\\Models\\Database\\Database' => __DIR__ . '/../..' . '/App/Models/Database/Database.php',
+        'App\\Models\\User' => __DIR__ . '/../..' . '/App/Models/User.php',
         'Bramus\\Router\\Router' => __DIR__ . '/..' . '/bramus/router/src/Bramus/Router/Router.php',
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
+        'Core\\Controller' => __DIR__ . '/../..' . '/Core/Controller.php',
+        'Core\\Flash' => __DIR__ . '/../..' . '/Core/Flash.php',
+        'Core\\Helper\\Validate' => __DIR__ . '/../..' . '/Core/Helper/Validate.php',
+        'Core\\Redirect' => __DIR__ . '/../..' . '/Core/Redirect.php',
+        'Core\\View' => __DIR__ . '/../..' . '/Core/View.php',
+        'Rakit\\Validation\\Attribute' => __DIR__ . '/..' . '/rakit/validation/src/Attribute.php',
+        'Rakit\\Validation\\ErrorBag' => __DIR__ . '/..' . '/rakit/validation/src/ErrorBag.php',
+        'Rakit\\Validation\\Helper' => __DIR__ . '/..' . '/rakit/validation/src/Helper.php',
+        'Rakit\\Validation\\MimeTypeGuesser' => __DIR__ . '/..' . '/rakit/validation/src/MimeTypeGuesser.php',
+        'Rakit\\Validation\\MissingRequiredParameterException' => __DIR__ . '/..' . '/rakit/validation/src/MissingRequiredParameterException.php',
+        'Rakit\\Validation\\Rule' => __DIR__ . '/..' . '/rakit/validation/src/Rule.php',
+        'Rakit\\Validation\\RuleNotFoundException' => __DIR__ . '/..' . '/rakit/validation/src/RuleNotFoundException.php',
+        'Rakit\\Validation\\RuleQuashException' => __DIR__ . '/..' . '/rakit/validation/src/RuleQuashException.php',
+        'Rakit\\Validation\\Rules\\Accepted' => __DIR__ . '/..' . '/rakit/validation/src/Rules/Accepted.php',
+        'Rakit\\Validation\\Rules\\After' => __DIR__ . '/..' . '/rakit/validation/src/Rules/After.php',
+        'Rakit\\Validation\\Rules\\Alpha' => __DIR__ . '/..' . '/rakit/validation/src/Rules/Alpha.php',
+        'Rakit\\Validation\\Rules\\AlphaDash' => __DIR__ . '/..' . '/rakit/validation/src/Rules/AlphaDash.php',
+        'Rakit\\Validation\\Rules\\AlphaNum' => __DIR__ . '/..' . '/rakit/validation/src/Rules/AlphaNum.php',
+        'Rakit\\Validation\\Rules\\Before' => __DIR__ . '/..' . '/rakit/validation/src/Rules/Before.php',
+        'Rakit\\Validation\\Rules\\Between' => __DIR__ . '/..' . '/rakit/validation/src/Rules/Between.php',
+        'Rakit\\Validation\\Rules\\Callback' => __DIR__ . '/..' . '/rakit/validation/src/Rules/Callback.php',
+        'Rakit\\Validation\\Rules\\Date' => __DIR__ . '/..' . '/rakit/validation/src/Rules/Date.php',
+        'Rakit\\Validation\\Rules\\DateUtils' => __DIR__ . '/..' . '/rakit/validation/src/Rules/DateUtils.php',
+        'Rakit\\Validation\\Rules\\Defaults' => __DIR__ . '/..' . '/rakit/validation/src/Rules/Defaults.php',
+        'Rakit\\Validation\\Rules\\Different' => __DIR__ . '/..' . '/rakit/validation/src/Rules/Different.php',
+        'Rakit\\Validation\\Rules\\Email' => __DIR__ . '/..' . '/rakit/validation/src/Rules/Email.php',
+        'Rakit\\Validation\\Rules\\FileTrait' => __DIR__ . '/..' . '/rakit/validation/src/Rules/FileTrait.php',
+        'Rakit\\Validation\\Rules\\In' => __DIR__ . '/..' . '/rakit/validation/src/Rules/In.php',
+        'Rakit\\Validation\\Rules\\Ip' => __DIR__ . '/..' . '/rakit/validation/src/Rules/Ip.php',
+        'Rakit\\Validation\\Rules\\Ipv4' => __DIR__ . '/..' . '/rakit/validation/src/Rules/Ipv4.php',
+        'Rakit\\Validation\\Rules\\Ipv6' => __DIR__ . '/..' . '/rakit/validation/src/Rules/Ipv6.php',
+        'Rakit\\Validation\\Rules\\Lowercase' => __DIR__ . '/..' . '/rakit/validation/src/Rules/Lowercase.php',
+        'Rakit\\Validation\\Rules\\Max' => __DIR__ . '/..' . '/rakit/validation/src/Rules/Max.php',
+        'Rakit\\Validation\\Rules\\Min' => __DIR__ . '/..' . '/rakit/validation/src/Rules/Min.php',
+        'Rakit\\Validation\\Rules\\NotIn' => __DIR__ . '/..' . '/rakit/validation/src/Rules/NotIn.php',
+        'Rakit\\Validation\\Rules\\Numeric' => __DIR__ . '/..' . '/rakit/validation/src/Rules/Numeric.php',
+        'Rakit\\Validation\\Rules\\Present' => __DIR__ . '/..' . '/rakit/validation/src/Rules/Present.php',
+        'Rakit\\Validation\\Rules\\Regex' => __DIR__ . '/..' . '/rakit/validation/src/Rules/Regex.php',
+        'Rakit\\Validation\\Rules\\Required' => __DIR__ . '/..' . '/rakit/validation/src/Rules/Required.php',
+        'Rakit\\Validation\\Rules\\RequiredIf' => __DIR__ . '/..' . '/rakit/validation/src/Rules/RequiredIf.php',
+        'Rakit\\Validation\\Rules\\RequiredUnless' => __DIR__ . '/..' . '/rakit/validation/src/Rules/RequiredUnless.php',
+        'Rakit\\Validation\\Rules\\RequiredWith' => __DIR__ . '/..' . '/rakit/validation/src/Rules/RequiredWith.php',
+        'Rakit\\Validation\\Rules\\RequiredWithAll' => __DIR__ . '/..' . '/rakit/validation/src/Rules/RequiredWithAll.php',
+        'Rakit\\Validation\\Rules\\RequiredWithout' => __DIR__ . '/..' . '/rakit/validation/src/Rules/RequiredWithout.php',
+        'Rakit\\Validation\\Rules\\RequiredWithoutAll' => __DIR__ . '/..' . '/rakit/validation/src/Rules/RequiredWithoutAll.php',
+        'Rakit\\Validation\\Rules\\Same' => __DIR__ . '/..' . '/rakit/validation/src/Rules/Same.php',
+        'Rakit\\Validation\\Rules\\TypeArray' => __DIR__ . '/..' . '/rakit/validation/src/Rules/TypeArray.php',
+        'Rakit\\Validation\\Rules\\UploadedFile' => __DIR__ . '/..' . '/rakit/validation/src/Rules/UploadedFile.php',
+        'Rakit\\Validation\\Rules\\Uppercase' => __DIR__ . '/..' . '/rakit/validation/src/Rules/Uppercase.php',
+        'Rakit\\Validation\\Rules\\Url' => __DIR__ . '/..' . '/rakit/validation/src/Rules/Url.php',
+        'Rakit\\Validation\\Validation' => __DIR__ . '/..' . '/rakit/validation/src/Validation.php',
+        'Rakit\\Validation\\Validator' => __DIR__ . '/..' . '/rakit/validation/src/Validator.php',
     );
 
     public static function getInitializer(ClassLoader $loader)

@@ -15,13 +15,21 @@ class Flash
         $_SESSION[self::$key][$name] = $message;
     }
 
-    public static function getFlash($name)
+    public static function hasFlash($name)
     {
         if (!empty($_SESSION[self::$key][$name])) {
+            return true;
+        }
+        return false;
+    }
+
+    public static function getFlash($name)
+    {
+        if (self::hasFlash($name)) {
             $message = $_SESSION[self::$key][$name];
             unset($_SESSION[self::$key][$name]);
             return $message;
         }
-        return null;
+        return false;
     }
 }

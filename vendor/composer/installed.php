@@ -1,9 +1,9 @@
 <?php return array(
     'root' => array(
         'name' => '__root__',
-        'pretty_version' => '1.0.0+no-version-set',
-        'version' => '1.0.0.0',
-        'reference' => NULL,
+        'pretty_version' => 'dev-master',
+        'version' => 'dev-master',
+        'reference' => '94776f9fba0e9033def29d4b4c436589b0c83c9b',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -11,9 +11,9 @@
     ),
     'versions' => array(
         '__root__' => array(
-            'pretty_version' => '1.0.0+no-version-set',
-            'version' => '1.0.0.0',
-            'reference' => NULL,
+            'pretty_version' => 'dev-master',
+            'version' => 'dev-master',
+            'reference' => '94776f9fba0e9033def29d4b4c436589b0c83c9b',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
@@ -25,6 +25,15 @@
             'reference' => '55657b76da8a0a509250fb55b9dd24e1aa237eba',
             'type' => 'library',
             'install_path' => __DIR__ . '/../bramus/router',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
+        'rakit/validation' => array(
+            'pretty_version' => 'v0.19.0',
+            'version' => '0.19.0.0',
+            'reference' => '3af4f0bb207abb77e9cd122354c75e824be56895',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../rakit/validation',
             'aliases' => array(),
             'dev_requirement' => false,
         ),

@@ -2,21 +2,19 @@
 
 namespace Core;
 
-
-
+use Core\Flash;
 
 class View
 {
+    protected $path = __DIR__ . '/../App/Views';
+    protected $page;
+    protected ?array $data;
 
-    protected static $path = __DIR__ . '/../App/Views';
-    protected static $page;
-    protected static ?array $data;
-
-
-    public static function render($page, $data = null)
+    public function render($page, $data = null)
     {
-        self::$page = $page;
-        self::$data = $data;
-        include(self::$path . '/' . self::$page . '.php');
+        $this->page = $page;
+        $this->data = $data;
+        include($this->path . '/' . $this->page . '.php');
+        die();
     }
 }

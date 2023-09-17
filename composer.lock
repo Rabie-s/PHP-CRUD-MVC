@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1c8a1ef3d6be7e51a0a9b9c991ff9fc9",
+    "content-hash": "35365441af534a5244f874aaf02d792a",
     "packages": [
         {
             "name": "bramus/router",
@@ -56,6 +56,49 @@
                 "source": "https://github.com/bramus/router/tree/1.6.1"
             },
             "time": "2021-11-18T19:24:07+00:00"
+        },
+        {
+            "name": "rakit/validation",
+            "version": "v0.19.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/rakit/validation.git",
+                "reference": "3af4f0bb207abb77e9cd122354c75e824be56895"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/rakit/validation/zipball/3af4f0bb207abb77e9cd122354c75e824be56895",
+                "reference": "3af4f0bb207abb77e9cd122354c75e824be56895",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.5.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "4.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Rakit\\Validation\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Muhammad Syifa",
+                    "email": "emsifa@gmail.com"
+                }
+            ],
+            "description": "PHP Laravel like standalone validation library",
+            "support": {
+                "issues": "https://github.com/rakit/validation/issues",
+                "source": "https://github.com/rakit/validation/tree/master"
+            },
+            "time": "2018-09-08T12:07:46+00:00"
         }
     ],
     "packages-dev": [],

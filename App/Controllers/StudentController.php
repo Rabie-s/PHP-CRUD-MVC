@@ -2,21 +2,24 @@
 
 namespace App\Controllers;
 
-use Core\View;
+use Core\Controller;
+use App\Models\Student;
 
 
-class StudentController
+
+class StudentController extends Controller
 {
 
     public function index()
     {
-        View::render('students');
+        $Students = new Student();
+        $this->View->render('students/students',['students'=>$Students->getStudents()]);
     }
 
     public function create()
     {
-        
-        View::render('create_student');
+
+        $this->View->render('students/students/create_student');
     }
 
     public function store()

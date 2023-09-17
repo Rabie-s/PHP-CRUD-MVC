@@ -10,6 +10,7 @@ class Config{
         'DB_NAME' => 'MVC-Project',
     ];
 
-    const BASE_URL = 'http://localhost/MVC-Project/Public/';
+    const BASE_URL = 'http://localhost/MVC-Project/Public';
+    const ASSETS = 'http://localhost/MVC-Project/Public/assets/';
     
 }

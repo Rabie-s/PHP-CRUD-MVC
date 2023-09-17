@@ -3,46 +3,67 @@
 namespace App\Controllers;
 
 use App\Models\User;
-use Core\View;
-use App\Config;
+use Core\Controller;
 use Core\Flash;
+use Rakit\Validation\Validator;
+
+
+
 
 //validation
-class UserController
+class UserController extends Controller
 {
-
 
     public function index()
     {
-        View::render('login');
+        $this->View->render('login');
     }
 
-    public function register()
+    public function registerIndex()
     {
-        View::render('register',['name'=>'ahmad']);
+        $this->View->render('register');
     }
 
-    public function storeRegister(){
-        
+    public function storeRegister()
+    {
+        $validator = new Validator;
+
+        $validation = $validator->validate($_POST, [
+            'name' => 'required',
+            'email' => 'required|email',
+            'password' => 'required|min:6',
+        ]);
+
+        if ($validation->fails()) {
+            // validation fail
+            $errors = $validation->errors();
+            Flash::setFlash('error', $errors->firstOfAll());
+            $this->Redirect->to('/register');
+        } else {
+            // validation passes
+            $User = new User();
+
+            if($User->existsEmail($_POST)){
+                Flash::setFlash('error', ['The email is exists.']);
+                $this->Redirect->to('/register');
+            }else{
+                $User->store($_POST);
+                $this->Redirect->to('/');
+            }
 
 
-        $data = [
-            'name'=>htmlspecialchars($_POST['name']),
-            'email'=>htmlspecialchars($_POST['email']),
-            'password'=>htmlspecialchars($_POST['password']),
-        ];
-        $User = new User();
-        $User->store($data);
-
-        //'Location: '.$_SERVER['HTTP_ORIGIN'].$_SERVER['PHP_SELF'].'/'
-        return header('Location: '.Config::BASE_URL);
-
-        
-        
+        }
     }
 
     public function login()
     {
+        $User = new User();
+        if($User->login($_POST)){
+            $this->Redirect->to('/admin/students');
+        }else{
+            echo 'no';
+        }
+        
     }
 
     public function logOut()

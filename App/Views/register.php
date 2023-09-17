@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/style/tailwind/output.css">
+    <link rel="stylesheet" href="<?= App\Config::ASSETS ?>style/tailwind/output.css">
     <title>CLI</title>
 </head>
 
@@ -18,6 +18,16 @@
             <div class="mb-3">
                 <h1 class="text-center text-white text-4xl uppercase">Register</h1>
             </div>
+
+            <?php if (Core\Flash::hasFlash('error')) : ?>
+                <div class="w-full p-1 bg-red-700 rounded">
+                    <?php foreach (Core\Flash::getFlash('error') as $error) : ?>
+                        <ul class="text-white">
+                            <li><?= $error ?></li>
+                        </ul>
+                    <?php endforeach; ?>
+                </div>
+            <?php endif; ?>
 
             <form action="register/store" method="post">
                 <div class="mb-2">
