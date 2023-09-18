@@ -8,19 +8,16 @@
     <title>CLI</title>
 </head>
 
-<body class="bg-slate-700">
-
+<body class="bg-white">
+<?php include(App\Config::LAYOUTS . 'nav-bar.php'); ?>
     <div class="container mx-auto">
 
-        <div class="bg-slate-800 rounded-lg">
+        <?php include(App\Config::LAYOUTS . 'button_group.php'); ?>
 
-            <div class="space-x-3 mt-10">
-                <button class="btn-primary px-3">Add student</button>
-                <button class="btn-emerald px-3">Students</button>
-            </div>
+        <div class="bg-white rounded-lg">
 
-            <table class="text-white w-full">
-                <thead class="border-b-2 bg-slate-900 ">
+            <table class="text-black w-full">
+                <thead class="border-b-2 bg-gray-200">
                     <tr>
                         <th class="text-left text-xl p-2">Name</th>
                         <th class="text-left text-xl p-2">Email</th>
@@ -32,14 +29,14 @@
 
                 <tbody>
                     <?php foreach ($data['students'] as $student) : ?>
-                        <tr class="odd:bg-slate-700">
+                        <tr class="odd:bg-gray-100">
                             <td class="text-base p-2 mb-5"><?= $student['full_name'] ?></td>
                             <td class="text-base p-2 mb-5"><?= $student['email'] ?></td>
                             <td class="text-base p-2 mb-5"><?= $student['phone_number'] ?></td>
                             <td class="text-base p-2 mb-5"><?= $student['address'] ?></td>
                             <td class="space-x-3">
-                                <a class="text-sky-600" href="http://">Edit</a>
-                                <a class="text-red-600" href="http://">Delete</a>
+                                <a href='<?= App\Config::BASE_URL ?>/admin/students/edit/<?= $student['id'] ?>' class="text-blue-600" href="http://">Edit</a>
+                                <a href='<?= App\Config::BASE_URL ?>/admin/students/delete/<?= $student['id'] ?>' class="text-red-600" href="http://">Delete</a>
                             </td>
                         </tr>
                     <?php endforeach; ?>

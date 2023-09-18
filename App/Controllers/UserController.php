@@ -10,9 +10,16 @@ use Rakit\Validation\Validator;
 
 
 
+
 //validation
 class UserController extends Controller
 {
+    function __destruct()
+    {
+        if(isset($_SESSION['name'])){
+            $this->Redirect->to('/admin/students/');
+        }
+    }
 
     public function index()
     {
@@ -68,5 +75,13 @@ class UserController extends Controller
 
     public function logOut()
     {
+
+	session_unset(); // Unset The Data
+
+	session_destroy(); // Destory The Session
+
+	$this->Redirect->to('/');
+
+	exit();
     }
 }

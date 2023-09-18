@@ -2,8 +2,6 @@
 
 namespace Core;
 
-use Core\Flash;
-
 class View
 {
     protected $path = __DIR__ . '/../App/Views';

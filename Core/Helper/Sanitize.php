@@ -1,5 +1,8 @@
 <?php
+namespace Core\Helper;
 
-function Sanitize($string){
-    return htmlspecialchars(trim($string));
+class Sanitize{
+    function Sanitize($string){
+        return htmlspecialchars(trim($string));
+    }
 }

@@ -8,6 +8,7 @@ $router->setNamespace('App\Controllers');
 //login
 $router->get('/','UserController@index');
 $router->post('/login','UserController@login');
+$router->get('/logout','UserController@logOut');
 //register
 $router->get('/register','UserController@registerIndex');
 $router->post('/register/store','UserController@storeRegister');
@@ -23,6 +24,10 @@ $router->before('GET|POST', '/admin/.*', function() {
 
 $router->get('admin/students','StudentController@index');
 $router->get('admin/students/create','StudentController@create');
+$router->post('admin/students/store','StudentController@store');
+$router->get('admin/students/edit/{id}','StudentController@edit');
+$router->post('admin/students/update/{id}','StudentController@update');
+$router->get('admin/students/delete/{id}','StudentController@destroy');
 
 
 

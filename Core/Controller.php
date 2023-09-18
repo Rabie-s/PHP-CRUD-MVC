@@ -5,8 +5,8 @@ use Core\View;
 
 class Controller{
 
-    public View $View;
-    public Redirect $Redirect;
+    public ?View $View = null;
+    public ?Redirect $Redirect = null;
     
 
     function __construct()

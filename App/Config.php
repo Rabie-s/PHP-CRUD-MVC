@@ -12,5 +12,6 @@ class Config{
 
     const BASE_URL = 'http://localhost/MVC-Project/Public';
     const ASSETS = 'http://localhost/MVC-Project/Public/assets/';
+    const LAYOUTS = __DIR__.'/Views/layouts/';
     
 }

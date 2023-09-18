@@ -8,15 +8,13 @@
     <title>CLI</title>
 </head>
 
-<body class="bg-slate-700">
-
-
+<body class="bg-gray-100">
 
     <div class="h-screen flex justify-center items-center">
 
-        <div class="w-96 p-4 bg-slate-800 rounded-lg">
+        <div class="w-96 p-4 bg-white rounded-lg">
             <div class="mb-3">
-                <h1 class="text-center text-white text-4xl uppercase">Register</h1>
+                <h1 class="text-center text-black text-4xl uppercase">Register</h1>
             </div>
 
             <?php if (Core\Flash::hasFlash('error')) : ?>
@@ -31,22 +29,22 @@
 
             <form action="register/store" method="post">
                 <div class="mb-2">
-                    <label class="block text-white mb-1" for="">Name</label>
-                    <input class="input" name="name" type="text">
+                    <label class="block text-black mb-1" for="">Name</label>
+                    <input class="outline outline-1 w-full px-1 rounded text-lg" name="name" type="text">
                 </div>
 
                 <div class="mb-2">
-                    <label class="block text-white mb-1" for="">Email</label>
-                    <input class="input" name="email" type="text">
+                    <label class="block text-black mb-1" for="">Email</label>
+                    <input class="outline outline-1 w-full px-1 rounded text-lg" name="email" type="text">
                 </div>
 
                 <div class="mb-2">
-                    <label class="block text-white mb-1" for="">Password</label>
-                    <input class="input" name="password" type="password">
+                    <label class="block text-black mb-1" for="">Password</label>
+                    <input class="outline outline-1 w-full px-1 rounded text-lg" name="password" type="password">
                 </div>
 
                 <div class="mb-2">
-                    <button class="btn-emerald w-full" type="submit">Register</button>
+                    <button class="py-1 text-white bg-blue-600 hover:bg-blue-700 rounded text-lg w-full" type="submit">Register</button>
                 </div>
             </form>
 

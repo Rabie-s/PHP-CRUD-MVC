@@ -4,56 +4,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../Public/assets/style/tailwind/output.css">
+    <link rel="stylesheet" href="<?= App\Config::ASSETS ?>style/tailwind/output.css">
     <title>CLI</title>
 </head>
 
-<body class="bg-slate-700">
+<body class="bg-gray-100">
 
-
+    <?php include(App\Config::LAYOUTS . 'nav-bar.php'); ?>
 
     <div class="container mx-auto">
 
-        <div class="space-x-3">
-            <button class="btn-primary px-3">Add student</button>
-            <button class="btn-emerald px-3">Students</button>
-        </div>
+        <?php include(App\Config::LAYOUTS . 'button_group.php'); ?>
 
-        <div class="p-4 bg-slate-800 rounded-lg">
-            <div class="mb-3">
-                <h1 class="text-center text-white text-4xl uppercase">Add student</h1>
+        <form action="<?= App\Config::BASE_URL ?>/admin/students/store" method="post">
+
+            <div class="p-4 bg-white rounded-lg">
+                <div class="mb-3">
+                    <h1 class="text-center text-black text-4xl uppercase">Add student</h1>
+                </div>
+
+                <?php if (Core\Flash::hasFlash('errors')) : ?>
+                    <div class="w-full p-1 bg-red-700 rounded">
+                        <?php foreach (Core\Flash::getFlash('errors') as $error) : ?>
+                            <ul class="text-white">
+                                <li><?= $error ?></li>
+                            </ul>
+                        <?php endforeach; ?>
+                    </div>
+                <?php endif; ?>
+
+                <div class="mb-3">
+                    <label class="block text-black mb-2 text-lg">Full name</label>
+                    <input class="outline outline-1 w-full px-1 rounded text-lg" name="full_name" type="text">
+                </div>
+
+                <div class="mb-3">
+                    <label class="block text-black mb-2 text-lg">Email</label>
+                    <input class="outline outline-1 w-full px-1 rounded text-lg" name="email" type="text">
+                </div>
+
+                <div class="mb-3">
+                    <label class="block text-black mb-2 text-lg">Phone number</label>
+                    <input class="outline outline-1 w-full px-1 rounded text-lg" name="phone_number" type="text">
+                </div>
+
+                <div class="mb-3">
+                    <label class="block text-black mb-2 text-lg">Address</label>
+                    <input class="outline outline-1 w-full px-1 rounded text-lg" name="address" type="text">
+                </div>
+
+                <div class="mb-3">
+                    <button class="py-1 text-white bg-blue-600 hover:bg-blue-700 rounded text-lg w-full" type="submit">Save student</button>
+                </div>
             </div>
 
-            <div class="mb-3">
-                <label class="block text-white mb-2 text-lg">Full name</label>
-                <input class="input" type="text">
-            </div>
-
-            <div class="mb-3">
-                <label class="block text-white mb-2 text-lg">Email</label>
-                <input class="input" type="text">
-            </div>
-
-            <div class="mb-3">
-                <label class="block text-white mb-2 text-lg">Phone number</label>
-                <input class="input" type="text">
-            </div>
-
-            <div class="mb-3">
-                <label class="block text-white mb-2 text-lg">Address</label>
-                <input class="input" type="text">
-            </div>
-
-            <div class="mb-3">
-                <button class="btn-emerald w-full" type="submit">Save student</button>
-            </div>
-        </div>
-
+        </form>
 
     </div>
-
-
-
 
 </body>
 
