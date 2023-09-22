@@ -18,7 +18,7 @@
             </div>
 
             <?php if (Core\Flash::hasFlash('error')) : ?>
-                <div class="w-full p-1 bg-red-700 rounded">
+                <div class="w-full p-1 bg-red-600 rounded">
                     <?php foreach (Core\Flash::getFlash('error') as $error) : ?>
                         <ul class="text-white">
                             <li><?= $error ?></li>
@@ -48,7 +48,9 @@
                 </div>
             </form>
 
-
+            <div class="w-full flex justify-center">
+                <a class="text-blue-600" href="<?= App\Config::BASE_URL ?>/">Login</a>
+            </div>
         </div>
 
 

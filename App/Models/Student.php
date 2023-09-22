@@ -2,9 +2,9 @@
 
 namespace App\Models;
 
-use App\Models\Database\Database;
+use Core\Model;
 
-class Student extends Database
+class Student extends Model
 {
 
     public function store($data)

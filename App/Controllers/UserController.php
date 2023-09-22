@@ -58,7 +58,6 @@ class UserController extends Controller
                 $this->Redirect->to('/');
             }
 
-
         }
     }
 
@@ -68,7 +67,8 @@ class UserController extends Controller
         if($User->login($_POST)){
             $this->Redirect->to('/admin/students');
         }else{
-            echo 'no';
+            Flash::setFlash('error',['Incorrect email or password.']);
+            $this->Redirect->to('/');
         }
         
     }

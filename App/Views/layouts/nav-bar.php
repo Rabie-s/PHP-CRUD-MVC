@@ -1,21 +1,23 @@
-<nav class="bg-blue-600 py-4 flex flex-wrap justify-between items-center px-3">
-    <h1 class="text-white text-2xl">Blogee</h1>
+<nav class="bg-blue-600 py-3 px-2 min-h-[70px]">
 
-    <div class="w-full sm:w-[auto]">
+    <div class="hidden md:flex md:justify-between flex-col md:flex-row items-center" id="nav_items">
+        <h1 class="text-2xl text-white">MVC-PROJECT</h1>
 
-        <ul class="text-white flex gap-x-4 flex-col sm:flex-row 
-            items-center gap-y-4 hidden sm:flex" id="nav_items">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Contact us</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="/MVC-Project/Public/logout">Log-out</a></li>
+
+        <ul class="text-xl my-3 gap-x-4 text-center md:flex">
+            <li class="text-white hover:text-black"><a href="<?= App\Config::BASE_URL ?>/admin/students">Home</a></li>
+            <li class="text-white hover:text-black"><a href="#">About</a></li>
+            <li class="text-white hover:text-black"><a href="#">Contact us</a></li>
         </ul>
 
+        <ul class="text-white rounded-lg text-center md:flex md:gap-x-3">
+            <li>Welcome <?= $_SESSION['name'] ?></li>
+            <li class="hover:text-black"><a href="<?= App\Config::BASE_URL ?>/logout">Logout</a></li>
+        </ul>
 
     </div>
 
-    <div class="inline sm:hidden absolute top-5 right-5" id="btn">
-        <i class="fa-solid fa-bars text-white"></i>
+    <div class="md:hidden absolute top-3 right-3 text-2xl text-white cursor-pointer" id="btn">
+        <i class="fa-solid fa-bars"></i>
     </div>
-
 </nav>

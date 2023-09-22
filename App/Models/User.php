@@ -3,10 +3,10 @@
 namespace App\Models;
 
 use PDO;
-use App\Models\Database\Database;
+use Core\Model;
 
 
-class User extends Database
+class User extends Model
 {
 
     public function store($data)

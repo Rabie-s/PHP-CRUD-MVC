@@ -1,12 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="<?= App\Config::ASSETS ?>style/tailwind/output.css">
-    <title>CLI</title>
-</head>
+<?php include(App\Config::LAYOUTS . 'head.php'); ?>
 
 <body class="bg-gray-100">
 
@@ -14,7 +6,7 @@
 
     <div class="container mx-auto">
 
-        <?php include(App\Config::LAYOUTS . 'button_group.php'); ?>
+        <?php include(App\Config::LAYOUTS . 'button-group.php'); ?>
 
         <?php foreach ($data['student'] as $student) : ?>
             <form action="<?= App\Config::BASE_URL ?>/admin/students/update/<?= $student['id'] ?>" method="post">
@@ -25,7 +17,7 @@
                     </div>
 
                     <?php if (Core\Flash::hasFlash('errors')) : ?>
-                        <div class="w-full p-1 bg-red-700 rounded">
+                        <div class="w-full p-1 bg-red-600 rounded">
                             <?php foreach (Core\Flash::getFlash('errors') as $error) : ?>
                                 <ul class="text-white">
                                     <li><?= $error ?></li>
@@ -65,6 +57,4 @@
 
     </div>
 
-</body>
-
-</html>
+    <?php include(App\Config::LAYOUTS . 'footer.php'); ?>
