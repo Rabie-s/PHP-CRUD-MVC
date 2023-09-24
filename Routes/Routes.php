@@ -28,6 +28,7 @@ $router->post('admin/students/store','StudentController@store');
 $router->get('admin/students/edit/{id}','StudentController@edit');
 $router->post('admin/students/update/{id}','StudentController@update');
 $router->get('admin/students/delete/{id}','StudentController@destroy');
+$router->get('admin/students/about','StudentController@about');
 
 
 

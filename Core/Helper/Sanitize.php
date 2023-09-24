@@ -2,7 +2,7 @@
 namespace Core\Helper;
 
 class Sanitize{
-    function Sanitize($string){
+    public static function stringSanitize($string){
         return htmlspecialchars(trim($string));
     }
 }

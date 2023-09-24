@@ -3,16 +3,17 @@
 namespace App\Models;
 
 use Core\Model;
+use Core\Helper\Sanitize;
 
 class Student extends Model
 {
 
     public function store($data)
     {
-        $full_name = $data['full_name'];
-        $email = $data['email'];
-        $phone_number = $data['phone_number'];
-        $address = $data['address'];
+        $full_name = Sanitize::stringSanitize($data['full_name']);
+        $email = Sanitize::stringSanitize($data['email']);
+        $phone_number = Sanitize::stringSanitize($data['phone_number']);
+        $address = Sanitize::stringSanitize($data['address']);
 
         $sql = 'INSERT INTO `students`(`full_name`, `email`, `phone_number`, `address`) VALUES 
         (?,?,?,?)';
@@ -53,10 +54,10 @@ class Student extends Model
 
     public function updateStudent($data,$id)
     {
-        $full_name = $data['full_name'];
-        $email = $data['email'];
-        $phone_number = $data['phone_number'];
-        $address = $data['address'];
+        $full_name = Sanitize::stringSanitize($data['full_name']);
+        $email = Sanitize::stringSanitize($data['email']);
+        $phone_number = Sanitize::stringSanitize($data['phone_number']);
+        $address = Sanitize::stringSanitize($data['address']);
 
         $sql = "UPDATE `students` SET `full_name`=?,`email`=?,`phone_number`=?,`address`=? WHERE `id` = ?";
         $stmt = self::$db->prepare($sql);

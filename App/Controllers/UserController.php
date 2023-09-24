@@ -75,7 +75,6 @@ class UserController extends Controller
 
     public function logOut()
     {
-
 	session_unset(); // Unset The Data
 
 	session_destroy(); // Destory The Session
@@ -84,4 +83,6 @@ class UserController extends Controller
 
 	exit();
     }
+
+
 }

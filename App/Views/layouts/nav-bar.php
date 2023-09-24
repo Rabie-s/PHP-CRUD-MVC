@@ -6,7 +6,7 @@
 
         <ul class="text-xl my-3 gap-x-4 text-center md:flex">
             <li class="text-white hover:text-black"><a href="<?= App\Config::BASE_URL ?>/admin/students">Home</a></li>
-            <li class="text-white hover:text-black"><a href="#">About</a></li>
+            <li class="text-white hover:text-black"><a href="<?= App\Config::BASE_URL ?>/admin/students/about">About</a></li>
             <li class="text-white hover:text-black"><a href="#">Contact us</a></li>
         </ul>
 

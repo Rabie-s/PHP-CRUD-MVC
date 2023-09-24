@@ -31,7 +31,7 @@ class StudentController extends Controller
         $validation = $validator->validate($_POST, [
             'full_name' => 'required',
             'email' => 'required|email',
-            'phone_number' => 'required|max:15',
+            'phone_number' => 'required|min:8|max:15',
             'address' => 'required',
         ]);
 
@@ -65,5 +65,9 @@ class StudentController extends Controller
         $Student = new Student();
         $Student->updateStudent($_POST,$id);
         $this->Redirect->back();
+    }
+
+    public function about(){
+        $this->View->render('students/about');
     }
 }

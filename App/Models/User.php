@@ -4,6 +4,7 @@ namespace App\Models;
 
 use PDO;
 use Core\Model;
+use Core\Helper\Sanitize;
 
 
 class User extends Model
@@ -12,9 +13,9 @@ class User extends Model
     public function store($data)
     {
 
-        $name = $data['name'];
-        $email = $data['email'];
-        $password = $data['password'];
+        $name = Sanitize::stringSanitize($data['name']);
+        $email = Sanitize::stringSanitize($data['email']);
+        $password = Sanitize::stringSanitize($data['password']);
         $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 
         $query = "INSERT INTO `users` (`name`, `email`, `password`) VALUE (?,?,?)";
