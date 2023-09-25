@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Sep 24, 2023 at 07:42 PM
+-- Generation Time: Sep 25, 2023 at 03:18 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `MVC-Project`
+-- Database: `PHP-CRUD-MVC`
 --
 
 -- --------------------------------------------------------
@@ -41,7 +41,7 @@ CREATE TABLE `students` (
 
 INSERT INTO `students` (`id`, `full_name`, `email`, `phone_number`, `address`) VALUES
 (2, 'Ali', 'Ali@email.com', '0454251748', 'amman'),
-(3, 'SALEEM', 'SL@email.com', '145454514', 'amman');
+(3, 'SALEEM', 'SALEEM@email.com', '145454514', 'amman');
 
 -- --------------------------------------------------------
 
@@ -61,7 +61,8 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `password`) VALUES
-(45, 'Admin', 'admin@gmail.com', '$2y$10$AuOx8ZeQ.eHbT7/lejislOyDsNYJ8oF2RjUkjBBtpqBIgOUEnRgv2');
+(45, 'Admin', 'admin@gmail.com', '$2y$10$AuOx8ZeQ.eHbT7/lejislOyDsNYJ8oF2RjUkjBBtpqBIgOUEnRgv2'),
+(46, 'ahmad', 'ahmad@gmail.com', '$2y$10$vAnaix6x3jOPMtmhsVbw..Gk0isSUNNQydpaSRORmKr2tTDFmYVq.');
 
 --
 -- Indexes for dumped tables
@@ -87,13 +88,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `students`
 --
 ALTER TABLE `students`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=46;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=47;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
